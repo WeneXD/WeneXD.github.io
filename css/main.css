@@ -24,7 +24,6 @@ a{
     font-size:58px;
     width:150px;
     margin:auto;
-    color:aliceblue;
     transition:color 0.25s;
     border-top:0.75vh solid rgba(0,0,0,0);
     border-bottom:0.75vh solid rgba(0,0,0,0);
