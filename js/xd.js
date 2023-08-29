@@ -4,7 +4,7 @@ function change_XD(){
         change_XD();
         meow=Clamp(Math.floor(Math.random()*XD),0,XD-1).toString();
         document.getElementById("XD").setAttribute("pic","img/XD"+meow+".gif");
-        console.log("XD changed ["+meow+"]")
+        //console.log("XD changed ["+meow+"]")
     },500);
 }
 
@@ -42,7 +42,6 @@ function delete_XD(XD){
     setTimeout(function(){
         XD.remove();
         document.exitFullscreen();
-        console.log("räyh");
     },2500);
     setTimeout(function(){
         XD.innerHTML="";
