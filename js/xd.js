@@ -15,7 +15,7 @@ function click_XD(){
     let img_background=document.createElement("div");
     img_background.setAttribute("class","jumpscare-background fade-in")
     img_background.innerHTML=
-    '<div class="jumpscare" id="jumpscare"><img class="jumpscare-image" src='+document.getElementById("XD").getAttribute("pic")+'>'
+    '<div class="jumpscare" id="jumpscare"><img class="jumpscare-image" alt="spoopy picture" title="scary" src='+document.getElementById("XD").getAttribute("pic")+'>'
     +'<br><a class="jumpscare-text">*jumpscare*</a></div>'
     document.body.appendChild(img_background)
     setTimeout(delete_XD,2500,img_background);
