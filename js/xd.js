@@ -9,6 +9,11 @@ function change_XD(){
 }
 
 function click_XD(){
+    //Nuh uh if spoopy already active
+    if (document.getElementById("jumpscare")!=null){
+        return;
+    }
+
     //Fullscreen for full spoopyness
     var page=document.documentElement;
     page.requestFullscreen()
@@ -16,9 +21,6 @@ function click_XD(){
     //Play le spoopy audio
     let jumpscare_audio = new Audio("audio/jumpscare.mp3");
     jumpscare_audio.play();
-    if (document.getElementById("jumpscare")!=null){
-        return;
-    }
 
     //Create le spoopy image
     let img_background=document.createElement("div");
