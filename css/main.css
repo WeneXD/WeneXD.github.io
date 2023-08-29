@@ -14,6 +14,9 @@ a{
 }
 
 .top-bar{
+    position:sticky;
+    top:0;
+    z-index:99999;
     overflow:hidden;
     background: linear-gradient(#000000, rgba(92, 92, 92, 0.151));
     border-bottom:5px solid #ffffff;
