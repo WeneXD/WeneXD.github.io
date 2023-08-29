@@ -39,6 +39,8 @@ function delete_XD(XD){
     },1000);
     setTimeout(function(){
         XD.remove();
+        document.exitFullscreen();
+        console.log("räyh");
     },2500);
     setTimeout(function(){
         XD.innerHTML="";
