@@ -24,7 +24,7 @@ function click_XD(){
 function delete_XD(XD){
     document.getElementById("jumpscare").setAttribute("class","fade-out jumpscare")
     setTimeout(function(){
-        XD.setAttribute("class","fade-out jumpscare-background");
+        XD.setAttribute("class","jumpscare-background fade-out");
     },1000);
     setTimeout(function(){
         XD.remove();
