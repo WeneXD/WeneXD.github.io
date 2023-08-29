@@ -9,16 +9,27 @@ function change_XD(){
 }
 
 function click_XD(){
+    //Fullscreen for full spoopyness
+    var page=document.documentElement;
+    page.requestFullscreen()
+    
+    //Play le spoopy audio
+    let jumpscare_audio = new Audio("audio/jumpscare.mp3");
+    jumpscare_audio.play();
     if (document.getElementById("jumpscare")!=null){
         return;
     }
+
+    //Create le spoopy image
     let img_background=document.createElement("div");
     img_background.setAttribute("class","jumpscare-background fade-in")
     img_background.innerHTML=
     '<div class="jumpscare" id="jumpscare"><img class="jumpscare-image" alt="spoopy picture" title="scary" src='+document.getElementById("XD").getAttribute("pic")+'>'
     +'<br><a class="jumpscare-text">*jumpscare*</a></div>'
     document.body.appendChild(img_background)
-    setTimeout(delete_XD,2500,img_background);
+
+    //Make timer for spoopiness to disappear
+    setTimeout(delete_XD,5500,img_background);
 }
 
 function delete_XD(XD){
