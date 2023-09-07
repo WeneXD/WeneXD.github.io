@@ -4,7 +4,7 @@ function change_XD(){
         change_XD();
         meow=Clamp(Math.floor(Math.random()*XD),0,XD-1).toString();
         document.getElementById("XD").setAttribute("pic","img/XD"+meow+".gif");
-        //console.log("XD changed ["+meow+"]")
+        console.log("XD changed ["+meow+"]")
     },500);
 }
 
@@ -26,9 +26,10 @@ function click_XD(){
     let img_background=document.createElement("div");
     img_background.setAttribute("class","jumpscare-background fade-in")
     img_background.innerHTML=
-    '<div class="jumpscare" id="jumpscare"><img class="jumpscare-image" alt="spoopy picture" title="scary" src='+document.getElementById("XD").getAttribute("pic")+'>'
+    '<div class="jumpscare" id="jumpscare"><img class="jumpscare-image" id="jumpscare-image" alt="spoopy picture" title="scary" src='+document.getElementById("XD").getAttribute("pic")+'>'
     +'<br><a class="jumpscare-text">*jumpscare*</a></div>'
     document.body.appendChild(img_background)
+    document.getElementById("jumpscare-image").addEventListener("click",click_jumpscare);
 
     //Make timer for spoopiness to disappear
     setTimeout(delete_XD,5500,img_background);
@@ -46,6 +47,11 @@ function delete_XD(XD){
     setTimeout(function(){
         XD.innerHTML="";
     },2000);
+}
+
+function click_jumpscare(){
+    let fart_audio = new Audio("audio/fart.mp3");
+    fart_audio.play();
 }
 
 function Clamp(x,min,max){
