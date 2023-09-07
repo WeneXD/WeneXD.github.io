@@ -42,7 +42,8 @@ function delete_XD(XD){
     },1000);
     setTimeout(function(){
         XD.remove();
-        document.exitFullscreen();
+        //Scare the people that don't know how to exit fullscreen :3
+        //document.exitFullscreen();
     },2500);
     setTimeout(function(){
         XD.innerHTML="";
