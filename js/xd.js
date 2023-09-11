@@ -51,8 +51,31 @@ function delete_XD(XD){
 }
 
 function click_jumpscare(){
+    const fart_texts=["fart","*brrp*"]
+
+    //Jarvis, play the fart.mp3
     let fart_audio = new Audio("audio/fart.mp3");
+
+    //Create funny fart text
+    let fart_text=document.createElement("p");
+    fart_text.setAttribute("class","fart");
+
+    //Random position for the fart text
+    fart_x=Math.floor(Math.random()*60)+20;
+    fart_y=Math.floor(Math.random()*60)+20;
+    fart_size=Math.floor(Math.random()*80)+10;
+    fart_text.setAttribute("style",`left:${fart_x}vw;top:${fart_y}vh;font-size:${fart_size}px;`)
+
+    //InnerHTML and append to document.
+    farter=Math.floor(Math.random()*fart_texts.length);
+    fart_text.innerHTML=fart_texts[farter];
+    document.body.appendChild(fart_text);
+
     fart_audio.play();
+
+    setTimeout(() => {
+        fart_text.remove();
+    },950);
 }
 
 function Clamp(x,min,max){
