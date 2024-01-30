@@ -106,3 +106,14 @@ a{
     width:100vw;
     height:100vh;
 }
+
+.link-cont{
+    position:fixed;
+    top:125px;
+    left:20px;
+    border:1px solid white;
+    padding:5px 20px;
+    width:fit-content;
+    height:fit-content;
+    font-size:1.25em;
+}

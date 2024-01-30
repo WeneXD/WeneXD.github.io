@@ -45,3 +45,8 @@ button{
     animation-iteration-count:infinite;
     animation-timing-function:cubic-bezier(0.320, 0.8, 0.320, 0.8);
 }
+
+a{
+    color:inherit;
+    text-decoration:inherit;
+}
