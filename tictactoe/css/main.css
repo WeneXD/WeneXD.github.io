@@ -1,0 +1,47 @@
+@keyframes glow{
+    0% {transform:rotate(0deg); color:aliceblue;}
+    25% {transform:rotate(5deg); color:rgb(140,140,140);}
+    50% {transform:rotate(0deg); color:aliceblue;}
+    75% {transform:rotate(-5deg); color:rgb(140,140,140);}
+    100% {transform:rotate(0deg); color:aliceblue;}
+}
+
+body{
+    margin:0;
+    background-color:rgb(22,22,22);
+    color:aliceblue;
+    font-family:sans-serif;
+    text-align:center;
+}
+
+.tic-cont{
+    margin: 25px auto;
+    width:fit-content;
+    height:fit-content;
+    border:1px solid white;
+    padding:5px;
+}
+
+.button-row{
+    display:flex;
+    flex-direction:row;
+}
+
+.button-row > button{
+    width:125px;
+    height:125px;
+    margin:3px;
+    font-size:65px;
+}
+
+button{
+    background-color:rgb(22,22,22);
+    color:aliceblue;
+}
+
+.info{
+    animation-name:glow;
+    animation-duration:3s;
+    animation-iteration-count:infinite;
+    animation-timing-function:cubic-bezier(0.320, 0.8, 0.320, 0.8);
+}
